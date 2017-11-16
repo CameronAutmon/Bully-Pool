@@ -34,7 +34,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	
 	echo "<a href='#' class='w3-bar-item w3-button'>Reset Password</a>";
     echo "<a href='#' class='w3-bar-item w3-button'>Close Account</a>";
-    echo "<a href='#' class='w3-bar-item w3-button'>Jackets</a>";
 
 //}
 // if not, show message and link to login page
@@ -43,17 +42,5 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	//echo "You are currently logged out. Please <a href='login_page.php'>click here</a> to log in.";
 	//}
 ?>
-<script>
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else { 
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
 </body>
 </html>
