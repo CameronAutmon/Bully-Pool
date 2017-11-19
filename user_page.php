@@ -33,32 +33,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         // is an User logged in?
         if (isset($_SESSION['username']))
         {
-            $username = $_SESSION['username'];
-            $password = $_SESSION['password'];
-            $forename = $_SESSION['forename'];
-            $surname  = $_SESSION['surname'];
-            $type = $_SESSION['type'];
+           $username = $_SESSION['username'];
+          $firstName = $_SESSION['firstName'];
+          $lastName = $_SESSION['lastName'];
+          $email = $_SESSION['email'];
+          $userID = $_SESSION['userID'];
+          $password = $_SESSION['password'];
+          $isAdmin = $_SESSION['isAdmin'];
 
-            if($type != 'admin')
-            {
-                echo "Welcome back $forename <br><br>";   
-
-                // if so, show Admin content
-                echo "Placeholder for User content<br><br>";
-                
-                //if not, show message and link to login form
-                echo "<a href='logout_page.php'>logout </a> of website.";
-            }
-            else
-            {
-                header('Location: login_page.php');
-                exit();
-            }
-        }
-        else 
-        {
-            echo "<a href='logout_page.php'>logout</a> of website.";  
-        }
+       
 ?>
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
