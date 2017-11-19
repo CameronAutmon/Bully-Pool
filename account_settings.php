@@ -14,8 +14,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <body>
 <?php
 
-//if (isset($_SESSION['userid']))
-	//{
+if (isset($_SESSION['user_ID']))
+	{
 	// top bar
 	echo "<div class='w3-top'>";
 	echo  "<div class='w3-bar w3-light-grey w3-card w3-left-align w3-large'>";
@@ -33,14 +33,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 	echo "</header>";
 	
 	echo "<a href='#' class='w3-bar-item w3-button'>Reset Password</a>";
-    echo "<a href='#' class='w3-bar-item w3-button'>Close Account</a>";
+    echo "<a href='close_account.php' class='w3-bar-item w3-button'>Close Account</a>";
 
-//}
-// if not, show message and link to login page
-//else 
-	//{
-	//echo "You are currently logged out. Please <a href='login_page.php'>click here</a> to log in.";
-	//}
+}
+// if not, show message and link to home page
+else 
+{
+	echo "<p>You are currently logged out. Please <a href='login.php'>click here</a> to log in.</p>";
+}
 ?>
 </body>
 </html>
