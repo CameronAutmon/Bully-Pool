@@ -49,12 +49,10 @@ require_once 'login.php';
            $token    = hash('ripemd128', "$salt1$password$salt2");
            $row = $result->fetch_array(MYSQLI_ASSOC);
            echo '<h1>Profile Information</h1>';
-           echo 'Name: '   . $row['forename'] . " " . $row['surname'] .'<br>';
+           echo 'Name: '   . $row['first_name'] . " " . $row['last_name'] .'<br>';
            echo 'Username: '   . $row['user_name']   . '<br>';
            echo 'Email: '   . $row['email']   . '<br>';
-           echo 'Admin Privlage: '   . $row['is_admin']   . '<br>';
-           echo 'Phone: '   . $row['phone']   . '<br>';
-           echo 'Location: '   . $row['location_ID']   . '<br>';
+           echo 'Admin Privlage: '   . $row['isAdmin']   . '<br>';
            
                $result->close();
                $conn->close();
