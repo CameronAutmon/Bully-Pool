@@ -17,6 +17,9 @@
 		$query  = "DELETE FROM user_Table WHERE username = $account_user";
 		$result = $connection->query($query);
 		$connection->close();
+		$_SESSION = array();
+		setcookie(session_name(), '', time() - 3000000, '/');
+		session_destroy();
 		header('Location: home_page.html');
 		}
 		}
