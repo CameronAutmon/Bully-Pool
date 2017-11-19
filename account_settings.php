@@ -13,7 +13,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </style>
 <body>
 <?php
-
+session_start();
 if (isset($_SESSION['user_ID']))
 	{
 	// top bar

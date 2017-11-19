@@ -5,6 +5,7 @@
     <body>
 	 <?php
         // remove session and session cookie
+		session_start();
 		if (isset($_SESSION['user_ID']))
 		{
         $_SESSION = array();

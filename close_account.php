@@ -10,7 +10,7 @@
     </head>
     <body>
 	<?php
-
+		session_start();
 		if (isset($_SESSION['user_ID']))
 		{
 			echo "<h3>Are you sure you want to close your account?</h3>";        
