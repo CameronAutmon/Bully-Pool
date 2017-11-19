@@ -5,7 +5,7 @@
     </head>
     <?php
         // remove session and session cookie
-		//if (isset($_SESSION['username'])
+		//if (isset($_SESSION['userID'])
 		//{
         //$_SESSION = array();
 		//setcookie(session_name(), '', time() - 3000000, '/');
