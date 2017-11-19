@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $firstName = mysqli_real_escape_string($conn, $_POST["firstName"]);
     $lastName = mysqli_real_escape_string($conn, $_POST["lastName"]);
     $email = mysqli_real_escape_string($conn, $_POST["email"]);
-    $userId = mysqli_real_escape_string($conn, $_POST["userId"]);
+    $userID = mysqli_real_escape_string($conn, $_POST["userID"]);
     $password = mysqli_real_escape_string($conn, $_POST["password"]);
     $salt1    = "qm&h*";
     $salt2    = "pg!@";
@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $isAdmin = 0;
 
     $query = "INSERT INTO user_Table VALUES" .
-         "( \"$firstName\", \"$lastName\", \"$email\", \"$userId\", \"$isAdmin\", \"$token\" )";
+         "( \"$firstName\", \"$lastName\", \"$email\", \"$userID\", \"$isAdmin\", \"$token\" )";
 
     $result = $conn->query($query);
 
@@ -65,7 +65,7 @@ $conn->close();
                     <input class="w3-input" type="text" name = "email" placeholder="abc@xyz.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" style="width:90%" required></p>
 
                 <p><label><b>Unique User ID*</b></label>
-                    <input class="w3-input" placeholder="abc123" pattern = "^[a-zA-Z0-9]+$" name =     "userId" type="text" style="width:90%" required></p>
+                    <input class="w3-input" placeholder="abc123" pattern = "^[a-zA-Z0-9]+$" name =     "userID" type="text" style="width:90%" required></p>
 
                 <p><label><b>Password*</b></label>
                     <input class="w3-input" type="password" name = "password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" style="width:90%" maxlength="25" required></p>
