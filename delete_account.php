@@ -16,7 +16,7 @@ session_start();
 			die($connection->connect_error);
 		}
 		
-		$account_user = $_SESSION["userID"];
+		$account_user = $_SESSION["user_ID"];
 		$query  = "DELETE FROM user_Table WHERE username = $account_user";
 		$result = $connection->query($query);
 		$connection->close();
