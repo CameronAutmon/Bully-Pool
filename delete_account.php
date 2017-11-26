@@ -1,10 +1,12 @@
+<?php
+session_start();
+?>
 <html>
     <head>
         <title>Logged Out</title>
     </head>
 	<body>
 <?php
-        session_start();
 		if (isset($_SESSION['user_ID'])){
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		require_once 'login.php';
