@@ -22,8 +22,9 @@ if (isset($_SESSION['user_ID']))
 	echo    "<a class='w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red' href='javascript:void(0);' onclick='myFunction()' title='Toggle Navigation Menu'><i class='fa fa-bars'></i></a>";
 	echo    "<a href='home_page.html' class='w3-bar-item w3-button w3-padding-large w3-white'>Home</a>";
 	echo    "<a href='Travel_Request_Form.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>Travel</a>";
+	echo    "<a href='Travel_History.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>View History</a>";
 	echo    "<a href='profilePage.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>Profile</a>";
-	echo    "<a href='account_settings.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>Account Settings</a>";
+	echo    "<a href='account_settings.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>Account Settings</a>"
 	echo    "<a href='logout_page.php' class='w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white'>Sign Out</a>";
 	echo  "</div>";
 	echo "</div>";
@@ -32,7 +33,7 @@ if (isset($_SESSION['user_ID']))
 	    echo "<h1 class='w3-margin w3-jumbo'>Account Settings</h1>";
 	echo "</header>";
 	
-	echo "<a href='#' class='w3-bar-item w3-button'>Reset Password</a>";
+	echo "<a href='resetPassword.php' class='w3-bar-item w3-button'>Reset Password</a>";
     echo "<a href='close_account.php' class='w3-bar-item w3-button'>Close Account</a>";
 
 }

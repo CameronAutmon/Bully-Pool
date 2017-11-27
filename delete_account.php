@@ -9,7 +9,7 @@ session_start();
 <?php
 		if (isset($_SESSION['user_ID'])){
 		if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		require_once 'login.php';
+		require_once 'database_login.php';
 		$connection = new mysqli($hn, $un, $pw, $db);
 		if ($connection->connect_error)
 		{
@@ -17,7 +17,7 @@ session_start();
 		}
 		
 		$account_user = $_SESSION["user_ID"];
-		$query  = "DELETE FROM user_Table WHERE username = $account_user";
+		$query  = "DELETE FROM user_Table WHERE username = '$account_user'";
 		$result = $connection->query($query);
 		$connection->close();
 		$_SESSION = array();
